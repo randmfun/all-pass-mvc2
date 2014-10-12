@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
+using all_pass.Hubs;
 
 namespace all_pass
 {
@@ -27,6 +28,7 @@ namespace all_pass
         protected void Application_Start()
         {
             RouteTable.Routes.MapHubs();
+            //RouteTable.Routes.MapConnection<MyConnection>("echo", "/echo");
 
             AreaRegistration.RegisterAllAreas();
 
